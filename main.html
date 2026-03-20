@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGILE 2026 Workshop Geography According to Foundation Models</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(0, 43, 91, 0.6), rgba(0, 43, 91, 0.6)), url('assets/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background: #f1c40f;
+            color: #2c3e50;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .highlight-box {
+            background: #eaf2f8;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #3498db;
+        }
+
+        .organizers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .organizer-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ecf0f1;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .organizer-card h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.1em;
+        }
+
+        .organizer-card p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <div class="container">
+            <h1>1st International Workshop on <br>Geography According to Foundation Models</h1>
+            <p>A Preconference Workshop of AGILE 2026</p>
+            <p>Tuesday 16 June 2026 Tartu Estonia</p>
+            <div class="badge">Call for Papers</div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>About</h2>
+            <p>The rapid rise of foundation models and generative AI has brought unprecedented changes to how we
+                understand and model geographic spaces. As these powerful systems increasingly shape real world
+                applications we face critical questions about spatial representation bias and fairness. While AI ethics
+                has become a central discussion globally there is still a pressing need to explore these challenges
+                specifically through the lens of geography and spatial sciences.</p>
+
+            <p>This workshop invites researchers and practitioners to dive into the intersection of geospatial
+                intelligence and foundation models. We aim to build an active community dedicated to responsible GeoAI
+                and better geographic alignment in AI systems to ensure future technologies effectively and ethically
+                represent our world.</p>
+
+            <p>Topics include but not limited to:</p>
+            <div style="margin-top: 20px;">
+                <h3 style="color: #3498db; margin-bottom: 5px; font-size: 1.1em;">Ethics of GeoAI</h3>
+                <ul style="margin-top: 0; padding-left: 20px;">
+                    <li>Geo-diversity</li>
+                    <li>Representation bias, Fairness, and Brittleness</li>
+                    <li>Geo-alignment of AI systems</li>
+                </ul>
+
+                <h3 style="color: #3498db; margin-bottom: 5px; font-size: 1.1em;">GeoAI and Foundation Models (FM)</h3>
+                <ul style="margin-top: 0; padding-left: 20px;">
+                    <li>(Geospatial) foundation models and Multi-model models</li>
+                    <li>Spatial representation learning</li>
+                    <li>Explicit versus implicit geo-knowledge in FM</li>
+                    <li>Neurosymbolic approaches to improve representation</li>
+                </ul>
+
+                <h3 style="color: #3498db; margin-bottom: 5px; font-size: 1.1em;">Evaluation and Governance</h3>
+                <ul style="margin-top: 0; padding-left: 20px;">
+                    <li>(Agentic) GeoAI benchmarks</li>
+                    <li>Topological reasoning in LLM and text-to-image models</li>
+                    <li>Transparency and accountability of GeoFM</li>
+                    <li>Reproducibility and validation of GenAI and GeoAI research</li>
+                </ul>
+
+                <h3 style="color: #3498db; margin-bottom: 5px; font-size: 1.1em;">Geographical Principles and Theories
+                </h3>
+                <ul style="margin-top: 0; padding-left: 20px;">
+                    <li>Alignment between GIScience concepts and AI representations</li>
+                    <li>Place-based reasoning versus abstract spatial reasoning</li>
+                </ul>
+
+                <h3 style="color: #3498db; margin-bottom: 5px; font-size: 1.1em;">Case Studies and Experiments</h3>
+                <ul style="margin-top: 0; padding-left: 20px;">
+                    <li>GenAI and GeoAI in participatory planning</li>
+                    <li>Impact of GenAI on tourism and Point of Interest recommenders</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h2>Submission Guidelines</h2>
+                <div style="padding-left: 20px;">
+                    <h3 style="color: #3498db; margin-bottom: 5px; font-size: 1.1em;">Paper Format and Length</h3>
+                    <p style="margin-top: 0;">Submissions must be formatted using the standard CEURART template. We
+                        welcome short papers of 2 to 4 pages. Please include full author information since anonymization
+                        is not required for this workshop.</p>
+
+                    <h3 style="color: #3498db; margin-bottom: 5px; font-size: 1.1em;">Publication and Outcomes</h3>
+                    <p style="margin-top: 0;">An online proceeding of the selected papers will be published at <a
+                            href="http://ceur-ws.org/" target="_blank"
+                            style="color: #3498db; text-decoration: underline;">CEUR proceedings</a>. Discussions from
+                        the workshop will be documented, organized, and shared as a whitepaper by all interested
+                        participants.</p>
+
+                    <h3 style="color: #3498db; margin-bottom: 5px; font-size: 1.1em;">How to Submit</h3>
+                    <p style="margin-top: 0;">All manuscripts should be submitted as PDF files.</p>
+                </div>
+
+            </div>
+
+            <div class="card highlight-box">
+                <h2>Important Dates</h2>
+                <ul style="padding-left: 20px; list-style-type: square;">
+                    <li><strong>Submission Deadline</strong> To be announced</li>
+                    <li><strong>Notification to authors</strong> To be announced</li>
+                    <li><strong>Workshop Date</strong> 16 June 2026</li>
+                </ul>
+            </div>
+        </div>
+
+<div class="card">
+        <h2>Workshop Program</h2>
+        <p>The detailed schedule will be announced shortly.</p>
+        
+        <div style="margin-top: 20px;">
+            
+            <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #ecf0f1;">
+                <strong style="color: #3498db; font-size: 1.1em;">Opening Remarks</strong>
+                <p style="margin: 5px 0 0 0;">Welcome and introduction to the workshop goals</p>
+            </div>
+
+            <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #ecf0f1;">
+                <strong style="color: #3498db; font-size: 1.1em;">Keynote 1</strong>
+                <!-- <p style="margin: 5px 0; font-weight: bold; color: #2c3e50;">[Talk Title TBA]</p> -->
+                <!-- <p style="margin: 0; color: #7f8c8d; font-size: 0.95em;">By [Speaker Name] [Affiliation]</p> -->
+            </div>
+
+            <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #ecf0f1;">
+                <strong style="color: #3498db; font-size: 1.1em;">Paper Presentations</strong>
+                <p style="margin: 5px 0;">Featuring accepted papers</p>
+                
+                <ul style="margin: 10px 0 0 0; padding-left: 20px;">
+                    <!-- <li style="margin-bottom: 10px;">
+                        <strong style="color: #333;">[Paper Title 1 TBA]</strong><br>
+                        <em style="color: #7f8c8d; font-size: 0.9em;">[Author 1] [Author 2] [Author 3]</em>
+                    </li>
+                    <li style="margin-bottom: 5px;">
+                        <strong style="color: #333;">[Paper Title 2 TBA]</strong><br>
+                        <em style="color: #7f8c8d; font-size: 0.9em;">[Author 1] [Author 2]</em>
+                    </li> -->
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #ecf0f1;">
+                <strong style="color: #3498db; font-size: 1.1em;">Keynote 2</strong>
+                <!-- <p style="margin: 5px 0; font-weight: bold; color: #2c3e50;">[Talk Title TBA]</p> -->
+                <!-- <p style="margin: 0; color: #7f8c8d; font-size: 0.95em;">By [Speaker Name] [Affiliation]</p> -->
+            </div>
+
+            <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #ecf0f1;">
+                <strong style="color: #3498db; font-size: 1.1em;">Hands on Tutorials</strong>
+                <p style="margin: 5px 0 0 0;">Demonstrations of novel GeoAI ethics methods and tools</p>
+            </div>
+
+            <div style="margin-bottom: 5px;">
+                <strong style="color: #3498db; font-size: 1.1em;">Discussions</strong>
+                <p style="margin: 5px 0 0 0;">Interactive breakout sessions and agenda setting</p>
+            </div>
+
+        </div>
+    </div>
+
+        <div class="card">
+            <h2>Organizing Committee</h2>
+            <div class="organizers-grid">
+
+                <div class="organizer-card">
+                    <img src="assets/krzysztof.jpg" alt="Prof. Dr. Krzysztof Janowicz">
+                    <h3><a href="https://kjano.github.io/" target="_blank"
+                            style="text-decoration: none; color: #3498db;">Krzysztof Janowicz</a></h3>
+                    <p>University of Vienna</p>
+                    <a href="mailto:krzysztof.janowicz@univie.ac.at"
+                        style="color: #3498db; text-decoration: none; font-size: 0.9em;">✉️
+                        krzysztof.janowicz@univie.ac.at</a>
+                </div>
+
+                <div class="organizer-card">
+                    <img src="assets/alexandra.jpg" alt="Alexandra Fortacz">
+                    <h3><a href="https://ufind.univie.ac.at/en/person.html?id=54770" target="_blank"
+                            style="text-decoration: none; color: #3498db;">Alexandra Fortacz</a></h3>
+                    <p>University of Vienna</p>
+                    <a href="mailto:alexandra.fortacz@univie.ac.at"
+                        style="color: #3498db; text-decoration: none; font-size: 0.9em;">✉️
+                        alexandra.fortacz@univie.ac.at</a>
+                </div>
+
+                <div class="organizer-card">
+                    <img src="assets/yingjing.jpg" alt="Dr. Yingjing Huang">
+                    <h3><a href="https://yingjinghuang.github.io/" target="_blank"
+                            style="text-decoration: none; color: #3498db;">Yingjing Huang</a></h3>
+                    <p>University of Vienna</p>
+                    <a href="mailto:yingjing.huang@univie.ac.at"
+                        style="color: #3498db; text-decoration: none; font-size: 0.9em;">✉️
+                        yingjing.huang@univie.ac.at</a>
+                </div>
+
+                <div class="organizer-card">
+                    <img src="assets/rui.jpg" alt="Dr. Rui Zhu">
+                    <h3><a href="https://ruizhugeographer.com/" target="_blank"
+                            style="text-decoration: none; color: #3498db;">Rui Zhu</a></h3>
+                    <p>University of Bristol</p>
+                    <a href="mailto:rui.zhu@bristol.ac.uk"
+                        style="color: #3498db; text-decoration: none; font-size: 0.9em;">✉️ rui.zhu@bristol.ac.uk</a>
+                </div>
+
+                <div class="organizer-card">
+                    <img src="assets/grant.jpg" alt="Prof. Dr. Grant McKenzie">
+                    <h3><a href="https://www.grantmckenzie.com/" target="_blank"
+                            style="text-decoration: none; color: #3498db;">Grant McKenzie</a></h3>
+                    <p>McGill University</p>
+                    <a href="mailto:grant.mckenzie@mcgill.ca"
+                        style="color: #3498db; text-decoration: none; font-size: 0.9em;">✉️ grant.mckenzie@mcgill.ca</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Programme Committee</h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 20px; font-size: 0.95em;">
+                <ul style="list-style-type: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 8px;"><strong>Ben Adams</strong> NZ</li>
+                    <li style="margin-bottom: 8px;"><strong>Ana Basiri</strong> UK</li>
+                    <li style="margin-bottom: 8px;"><strong>Vanessa Brum Bastos</strong> NZ</li>
+                    <li style="margin-bottom: 8px;"><strong>Mark Gahegan</strong> NZ</li>
+                    <li style="margin-bottom: 8px;"><strong>Song Gao</strong> USA</li>
+                    <li style="margin-bottom: 8px;"><strong>Anita Graser</strong> AT</li>
+                    <li style="margin-bottom: 8px;"><strong>Yingjie Hu</strong> USA</li>
+                    <li style="margin-bottom: 8px;"><strong>Weiming Huang</strong> UK</li>
+                </ul>
+                <ul style="list-style-type: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 8px;"><strong>Mina Karimi</strong> AT</li>
+                    <li style="margin-bottom: 8px;"><strong>Carsten Kessler</strong> DE</li>
+                    <li style="margin-bottom: 8px;"><strong>Gengchen Mai</strong> USA</li>
+                    <li style="margin-bottom: 8px;"><strong>Cait Robinson</strong> UK</li>
+                    <li style="margin-bottom: 8px;"><strong>Bruno Martins</strong> PT</li>
+                    <li style="margin-bottom: 8px;"><strong>Daniel Nust</strong> DE</li>
+                    <li style="margin-bottom: 8px;"><strong>Stef De Sabbata</strong> UK</li>
+                </ul>
+                <ul style="list-style-type: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 8px;"><strong>Simon Scheider</strong> NL</li>
+                    <li style="margin-bottom: 8px;"><strong>Johannes Scholz</strong> AT</li>
+                    <li style="margin-bottom: 8px;"><strong>Renee Sieber</strong> CA</li>
+                    <li style="margin-bottom: 8px;"><strong>Judith Verstegen</strong> NL</li>
+                    <li style="margin-bottom: 8px;"><strong>Zhangyu Wang</strong> USA</li>
+                    <li style="margin-bottom: 8px;"><strong>Nico Van de Weghe</strong> BE</li>
+                    <li style="margin-bottom: 8px;"><strong>Meiliu Wu</strong> UK</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>AGILE 2026 Tartu Estonia</p>
+    </footer>
+
+</body>
+
+</html>
