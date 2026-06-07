@@ -116,6 +116,55 @@
             color: #7f8c8d;
         }
 
+        .panelists-list {
+            list-style: none;
+            margin: 6px 0 0;
+            padding: 0;
+            font-size: 0.95em;
+            color: #444;
+        }
+
+        .panelists-list li {
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 3px;
+        }
+
+        .panelists-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.7em;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #3498db;
+            transform: translateY(-50%);
+        }
+
+        .panelists-list a {
+            color: #2c3e50;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .panelists-list .panelist-name {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .panelists-list a:hover {
+            color: #3498db;
+            text-decoration: underline;
+        }
+
+        .panelists-note {
+            margin: 7px 0 0;
+            color: #95a5a6;
+            font-size: 0.88em;
+            font-style: italic;
+        }
+
         footer {
             text-align: center;
             padding: 30px 20px;
@@ -329,7 +378,12 @@
                 <p style="margin: 10px 0 0 0; font-size: 0.95em; color: #444;">This panel brings together researchers working at the intersection of geography, GIScience, and foundation models to discuss the promises and limits of GeoFMs. The discussion will focus on whether current models capture meaningful geographic knowledge, what prevents reliable autonomous GIS agents, and how future GeoFMs can better account for local knowledge, spatial bias, uncertainty, and responsible use.</p>
                 <div style="margin-top: 12px;">
                     <p style="margin: 0 0 4px 0; font-weight: bold; color: #2c3e50;">Confirmed panelists</p>
-                    <p style="margin: 0; font-size: 0.95em; color: #444;">Prof. Dr. Johannes Scholz and Zilong Liu <span style="color: #95a5a6;">(additional panelists to be announced)</span></p>
+                    <ul class="panelists-list">
+                        <li><a href="https://www.plus.ac.at/geoinformatik/department/team/scholz/?lang=en" target="_blank">Prof. Dr. Johannes Scholz</a></li>
+                        <li><a href="https://ruizhugeographer.com/" target="_blank">Dr. Rui Zhu</a></li>
+                        <li><span class="panelist-name">Zilong Liu</span></li>
+                    </ul>
+                    <p class="panelists-note">Additional panelists to be announced.</p>
                 </div>
             </div>
 
