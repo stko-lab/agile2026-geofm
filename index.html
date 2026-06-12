@@ -27,6 +27,27 @@
             padding: 0 20px;
         }
 
+        .main-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content > * {
+            order: 4;
+        }
+
+        .main-content > .program-section {
+            order: 2;
+        }
+
+        .main-content > .about-section {
+            order: 1;
+        }
+
+        .main-content > .info-section {
+            order: 3;
+        }
+
         .hero {
             background-image: linear-gradient(rgba(0, 43, 91, 0.6), rgba(0, 43, 91, 0.6)), url('assets/banner.jpg');
             background-size: cover;
@@ -49,6 +70,14 @@
             font-weight: 300;
         }
 
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
         .hero .badge {
             display: inline-block;
             background: #f1c40f;
@@ -56,7 +85,17 @@
             padding: 5px 15px;
             border-radius: 20px;
             font-weight: bold;
-            margin-top: 15px;
+            text-decoration: none;
+        }
+
+        .hero .badge.proceedings-link {
+            background: #3498db;
+            color: white;
+        }
+
+        .hero .badge.proceedings-link:hover,
+        .hero .badge.proceedings-link:focus {
+            background: #2980b9;
         }
 
         .card {
@@ -191,13 +230,18 @@
             <h1>1st International Workshop on <br>Geography According to Foundation Models</h1>
             <p>A Preconference Workshop of AGILE 2026</p>
             <p>Tuesday, 16 June 2026 | Tartu, Estonia</p>
-            <div class="badge">Program</div>
+            <div class="hero-actions">
+                <a class="badge" href="#program">Program</a>
+                <a class="badge proceedings-link"
+                    href="https://zenodo.org/communities/agile2026-geofm-proceedings/records?q=&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest"
+                    target="_blank" rel="noopener noreferrer">View Proceedings</a>
+            </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container main-content">
 
-        <div class="card">
+        <div class="card about-section">
             <h2>About</h2>
             <p>The rapid rise of foundation models and generative AI has brought unprecedented changes to how we
                 understand and model geographic spaces. As these powerful systems increasingly shape real-world
@@ -250,48 +294,52 @@
             </div>
         </div>
 
-        <div class="grid-2">
-            <div class="card">
-                <h2>Submission Guidelines</h2>
-                <div style="margin: 0 0 18px 0; padding: 10px 14px; background: #fdecea; border-left: 4px solid #e74c3c; border-radius: 4px; color: #c0392b; font-weight: bold;">Submissions are now closed. Thank you to everyone who submitted.</div>
+        <div class="grid-2 info-section">
+            <div class="card submission-card" style="order: 2;">
+                <h2>Archived Submission Information</h2>
+                <div style="margin: 0 0 18px 0; padding: 10px 14px; background: #f8f9fa; border-left: 4px solid #95a5a6; border-radius: 4px; color: #5d6d7e; font-weight: bold;">Submissions are closed. This information is retained for reference.</div>
                 <div style="padding-left: 20px;">
-                    <h3 style="color: #3498db; margin-bottom: 5px; font-size: 1.1em;">Paper Format and Length</h3>
-                    <p style="margin-top: 0;">Submissions must be formatted using the standard <a href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw" target="_blank" style="color: #3498db; text-decoration: underline;">CEURART</a> template. We
-                        welcome short papers of 4 to 6 pages. Please include full author information since anonymization
-                        is not required for this workshop.</p>
+                    <h3 style="color: #3498db; margin-bottom: 5px; font-size: 1.1em;">Submission Format</h3>
+                    <p style="margin-top: 0;">Submissions were formatted using the standard <a href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw" target="_blank" style="color: #3498db; text-decoration: underline;">CEURART</a> template.
+                        Short papers of 4 to 6 pages were accepted, with full author information and no anonymization.</p>
 
                     <h3 style="color: #3498db; margin-bottom: 5px; font-size: 1.1em;">Publication and Outcomes</h3>
-                    <p style="margin-top: 0;">An online proceeding of the selected papers will be published as a joint proceedings volume. Discussions from
+                    <p style="margin-top: 0;">The selected papers are available in the
+                        <a href="https://zenodo.org/communities/agile2026-geofm-proceedings/records?q=&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest"
+                            target="_blank" rel="noopener noreferrer"
+                            style="color: #3498db; text-decoration: underline; font-weight: bold;">AGILE 2026 GeoFM Workshop Proceedings on Zenodo</a>.
+                        Discussions from
                         the workshop will be documented, organized, and shared as a whitepaper by all interested
                         participants.</p>
 
-                    <h3 style="color: #3498db; margin-bottom: 5px; font-size: 1.1em;">How to Submit</h3>
-                    <p style="margin-top: 0;">All manuscripts should be submitted as PDF files via the <a href="https://easychair.org/conferences/?conf=geofm2026" target="_blank" style="color: #3498db; text-decoration: underline;">EasyChair submission system</a>.</p>                </div>
+                    <h3 style="color: #3498db; margin-bottom: 5px; font-size: 1.1em;">Submission System</h3>
+                    <p style="margin-top: 0;">Manuscripts were submitted as PDF files via the <a href="https://easychair.org/conferences/?conf=geofm2026" target="_blank" style="color: #3498db; text-decoration: underline;">EasyChair submission system</a>.</p>                </div>
 
             </div>
 
-            <div class="card highlight-box">
-                <h2>Important Dates</h2>
-                <div style="margin-top: 10px;">
-                    <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px dashed #3498db; opacity: 0.6;">
+            <div class="card highlight-box dates-card" style="order: 1;">
+                <h2>Workshop Information</h2>
+                <div style="margin-top: 10px; display: flex; flex-direction: column;">
+                    <div style="order: 1; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px dashed #3498db;">
+                        <div style="font-size: 0.95em; color: #7f8c8d; text-transform: uppercase; letter-spacing: 1px;">Workshop Date</div>
+                        <div style="font-size: 1.4em; font-weight: bold; color: #2c3e50; margin-top: 4px;">16 June 2026</div>
+                        <div style="color: #5d6d7e; margin-top: 4px;">Room 246, Tartu, Estonia</div>
+                    </div>
+                    <div style="order: 2; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px dashed #3498db; opacity: 0.6;">
                         <div style="font-size: 0.95em; color: #7f8c8d; text-transform: uppercase; letter-spacing: 1px;">Submission Deadline <span style="color: #27ae60;">&#10003; Closed</span></div>
                         <div style="font-size: 1.4em; font-weight: bold; color: #95a5a6; margin-top: 4px;"><span style="text-decoration: line-through; font-weight: normal;">29 April 2026</span> 8 May 2026</div>
                     </div>
-                    <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px dashed #3498db; opacity: 0.6;">
+                    <div style="order: 3; opacity: 0.6;">
                         <div style="font-size: 0.95em; color: #7f8c8d; text-transform: uppercase; letter-spacing: 1px;">Notification to Authors <span style="color: #27ae60;">&#10003; Sent</span></div>
                         <div style="font-size: 1.4em; font-weight: bold; color: #95a5a6; margin-top: 4px;">15 May 2026</div>
-                    </div>
-                    <div>
-                        <div style="font-size: 0.95em; color: #7f8c8d; text-transform: uppercase; letter-spacing: 1px;">Workshop Date</div>
-                        <div style="font-size: 1.4em; font-weight: bold; color: #2c3e50; margin-top: 4px;">16 June 2026</div>
                     </div>
                 </div>
             </div>
         </div>
 
-<div class="card">
+<div class="card program-section" id="program">
         <h2>Workshop Program</h2>
-        <p>The workshop is scheduled to take place on <strong>Tuesday, 16 June 2026</strong>. Room: <strong>Room 246</strong>. The detailed schedule will be announced shortly.</p>
+        <p>The workshop will take place on <strong>Tuesday, 16 June 2026</strong> in <strong>Room 246</strong>. The full schedule is listed below.</p>
 
         <div style="margin-top: 25px;">
             <div style="font-size: 1.05em; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #3498db;">Session 1 &nbsp;<span style="color: #7f8c8d; font-weight: normal; font-size: 0.9em;">09:00 – 10:45</span></div>
