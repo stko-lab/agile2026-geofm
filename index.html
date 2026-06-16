@@ -204,6 +204,63 @@
             font-style: italic;
         }
 
+        .gallery-card {
+            overflow: hidden;
+        }
+
+        .gallery-intro {
+            margin-top: 0;
+            color: #5d6d7e;
+        }
+
+        .gallery {
+            position: relative;
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #ecf0f1;
+        }
+
+        .gallery-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 700ms ease;
+        }
+
+        .gallery-slide.is-active {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .gallery-dot {
+            width: 10px;
+            height: 10px;
+            padding: 0;
+            border: 0;
+            border-radius: 50%;
+            background: #bdc3c7;
+            cursor: pointer;
+        }
+
+        .gallery-dot.is-active {
+            background: #3498db;
+        }
+
         footer {
             text-align: center;
             padding: 30px 20px;
@@ -219,6 +276,10 @@
             .hero h1 {
                 font-size: 1.8em;
             }
+
+            .gallery {
+                aspect-ratio: 4 / 3;
+            }
         }
     </style>
 </head>
@@ -228,7 +289,7 @@
     <div class="hero">
         <div class="container">
             <h1>1st International Workshop on <br>Geography According to Foundation Models</h1>
-            <p>A Preconference Workshop of AGILE 2026</p>
+            <p>A completed preconference workshop of AGILE 2026</p>
             <p>Tuesday, 16 June 2026 | Tartu, Estonia</p>
             <div class="hero-actions">
                 <a class="badge" href="#program">Program</a>
@@ -309,7 +370,7 @@
                             target="_blank" rel="noopener noreferrer"
                             style="color: #3498db; text-decoration: underline; font-weight: bold;">AGILE 2026 GeoFM Workshop Proceedings on Zenodo</a>.
                         Discussions from
-                        the workshop will be documented, organized, and shared as a whitepaper by all interested
+                        the workshop are being documented, organized, and shared as a whitepaper by all interested
                         participants.</p>
 
                     <h3 style="color: #3498db; margin-bottom: 5px; font-size: 1.1em;">Submission System</h3>
@@ -339,7 +400,7 @@
 
 <div class="card program-section" id="program">
         <h2>Workshop Program</h2>
-        <p>The workshop will take place on <strong>Tuesday, 16 June 2026</strong> in <strong>Room 246</strong>. The full schedule is listed below.</p>
+        <p>The workshop took place on <strong>Tuesday, 16 June 2026</strong> in <strong>Room 246</strong>. The full schedule is archived below.</p>
 
         <div style="margin-top: 25px;">
             <div style="font-size: 1.05em; font-weight: bold; color: #2c3e50; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #3498db;">Session 1 &nbsp;<span style="color: #7f8c8d; font-weight: normal; font-size: 0.9em;">09:00 – 10:45</span></div>
@@ -443,6 +504,27 @@
         </div>
     </div>
 
+        <div class="card gallery-card" id="gallery">
+            <h2>Workshop Gallery</h2>
+            <p class="gallery-intro">A few moments from the AGILE 2026 GeoFM workshop in Tartu.</p>
+            <div class="gallery" aria-label="Workshop photo gallery">
+                <div class="gallery-slide is-active">
+                    <img src="assets/IMG_4411.jpeg" alt="Group photo from the AGILE 2026 GeoFM workshop">
+                </div>
+                <div class="gallery-slide">
+                    <img src="assets/IMG_4412.jpeg" alt="Second group photo from the AGILE 2026 GeoFM workshop">
+                </div>
+                <div class="gallery-slide">
+                    <img src="assets/panelDiscussion.jpg" alt="Panel discussion photo from the AGILE 2026 GeoFM workshop">
+                </div>
+            </div>
+            <div class="gallery-dots" aria-label="Gallery navigation">
+                <button class="gallery-dot is-active" type="button" aria-label="Show photo 1"></button>
+                <button class="gallery-dot" type="button" aria-label="Show photo 2"></button>
+                <button class="gallery-dot" type="button" aria-label="Show photo 3"></button>
+            </div>
+        </div>
+
         <div class="card">
             <h2>Organizing Committee</h2>
             <div class="organizers-grid">
@@ -523,6 +605,32 @@
     <footer>
         <p>AGILE 2026 Tartu Estonia</p>
     </footer>
+
+    <script>
+        const gallerySlides = document.querySelectorAll('.gallery-slide');
+        const galleryDots = document.querySelectorAll('.gallery-dot');
+        let galleryIndex = 0;
+
+        function showGallerySlide(index) {
+            galleryIndex = index;
+            gallerySlides.forEach((slide, slideIndex) => {
+                slide.classList.toggle('is-active', slideIndex === galleryIndex);
+            });
+            galleryDots.forEach((dot, dotIndex) => {
+                dot.classList.toggle('is-active', dotIndex === galleryIndex);
+            });
+        }
+
+        galleryDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showGallerySlide(index));
+        });
+
+        if (gallerySlides.length > 1) {
+            setInterval(() => {
+                showGallerySlide((galleryIndex + 1) % gallerySlides.length);
+            }, 5000);
+        }
+    </script>
 
 </body>
 
